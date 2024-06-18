@@ -8,19 +8,23 @@ class PostButtons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        TextButton(
+        TextButton.icon(
           onPressed: () {},
-          child: Text('Me gusta!'),
+          icon: const Icon(Icons.thumb_up),
+          label: const Text('Me gusta!'),
         ),
-        TextButton(
+        TextButton.icon(
           onPressed: () {},
-          child: Text('Comenta'),
+          icon: const Icon(Icons.comment),
+          label: const Text('Comenta'),
         ),
-        TextButton(
+        TextButton.icon(
           onPressed: () {},
-          child: Text('Compartir'),
+          icon: const Icon(Icons.share),
+          label: const Text('Compartir'),
         ),
       ],
     );
   }
 }
+

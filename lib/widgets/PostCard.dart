@@ -14,8 +14,8 @@ class PostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10.0),
-      padding: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),
@@ -24,7 +24,7 @@ class PostCard extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 5,
             blurRadius: 7,
-            offset: Offset(0, 3), // changes position of shadow
+            offset: const Offset(0, 3), // changes position of shadow
           ),
         ],
       ),
@@ -32,12 +32,12 @@ class PostCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PostTitle(username: username),
-          SizedBox(height: 5.0),
+          const SizedBox(height: 5.0),
           PostDescription(content: content),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           PostImage(imageUrl: imageUrl),
-          SizedBox(height: 10.0),
-          PostButtons(),
+          const SizedBox(height: 10.0),
+          const PostButtons(),
         ],
       ),
     );

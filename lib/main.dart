@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:golden_sun_posts/pantallas/PantallaPrincipal.dart';
+import 'package:golden_sun_posts/pantallas/BuscarPagina.dart';
+import 'package:golden_sun_posts/pantallas/AnadirContenidoPagina.dart';
+import 'package:golden_sun_posts/pantallas/TerminosCondicionesPagina.dart';
 
 void main() => runApp(const MyApp());
 
@@ -8,10 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false, // quita la etiqueta roja de debug
       title: 'Material App',
-      home: PantallaPrincipal(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const PantallaPrincipal(),
+        '/buscar': (context) => const BuscarPagina(),
+        '/anadir': (context) => const AnadirContenidoPagina(),
+        '/terminos': (context) => const TerminosCondicionesPagina(),
+      },
     );
   }
 }
