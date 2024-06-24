@@ -28,11 +28,22 @@ class PantallaPrincipal extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/terminos');
-              },
-              child: const Text('Términos y Condiciones'),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/terminos');
+                  },
+                  child: const Text('Términos y Condiciones'),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/formulario');
+                  },
+                  child: const Text('Formulario'),
+                ),
+              ],
             ),
           ),
         ],
